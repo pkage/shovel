@@ -12,6 +12,12 @@ body {
 #shovel {
     animation: 0.5s shake;
     animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+#shovel.hitting {
+    animation: 1s hit;
+    animation-iteration-count: 1;
 }
 
 .gradient {
@@ -65,4 +71,11 @@ body {
     90%  { transform: translate( 1px,  2px) rotate( 0deg); }
     100% { transform: translate( 1px, -2px) rotate(-1deg); }
 } 
+
+@keyframes hit {
+    0%    { transform: rotate(0deg);   }
+    80%   { transform: rotate(80deg);  }
+    85%   { transform: rotate(-20deg); }
+    100%  { transform: rotate(0deg);   }
+}
 
